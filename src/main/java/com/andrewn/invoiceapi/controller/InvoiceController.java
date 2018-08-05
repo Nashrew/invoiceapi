@@ -15,6 +15,9 @@ public class InvoiceController {
     @Autowired
     InvoiceService invoiceService;
 
+    // Mapping both "" and "/" was nice initially, since it allowed for users to use either one.
+    //  However, it causes the method to appear twice in swagger documentation, which is awkward.
+    //  Not sure if I should remove one. Finding lots of conflicting opinions on how to handle the situation.
     @RequestMapping(value = {"","/"}, method = RequestMethod.GET)
     public List<Invoice> getInvoices(@RequestParam(required = false, defaultValue = "0") Integer offset,
                                      @RequestParam(required = false, defaultValue = "10") Integer limit,

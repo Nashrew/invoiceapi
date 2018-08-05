@@ -12,8 +12,12 @@ Command line:
         Run:
          - Navigate to the invoiceapi/target directory, run 'java -jar {jarname}'.
 
-IntelliJ:
+Eclipse / IntelliJ:
 
-    If the project is correctly imported to IntelliJ as a maven project, you should be able to run the
+    If the project is correctly imported to an IDE as a maven project, you should be able to run the
     InvoiceapiApplication class to launch the spring boot app
 
+
+Usage:
+
+    API documentation can be found when the app is running at /swagger-ui.html
