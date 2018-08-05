@@ -1,9 +1,5 @@
 Instuctions to build, run, and use
 
-Prerequisites:
-    - Java 8
-    - Maven (3.3.9 used for development)
-
 Command line:
 
     Primary:
