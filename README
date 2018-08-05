@@ -21,7 +21,3 @@ IntelliJ:
     If the project is correctly imported to IntelliJ as a maven project, you should be able to run the
     InvoiceapiApplication class to launch the spring boot app
 
----
-
-Usage:
-
