@@ -30,11 +30,16 @@ public class InvoiceServiceImpl implements InvoiceService {
 
     @Override
     public List<Invoice> getInvoiceList(Integer offset, Integer limit, String invoiceNumber, String purchaseOrderNumber, String dueDateStart, String dueDateEnd) {
-        OffsetLimitRequest offsetLimitRequest = new OffsetLimitRequest(offset, limit, new Sort(Sort.Direction.DESC, SORT_FIELD));
-        return invoiceRepository.findByOptionalSearchParams(invoiceNumber, purchaseOrderNumber,
-                dueDateStart != null ? LocalDate.parse(dueDateStart) : null,
-                dueDateEnd != null ? LocalDate.parse(dueDateEnd) : null,
-                offsetLimitRequest).getContent();
+        try {
+            OffsetLimitRequest offsetLimitRequest = new OffsetLimitRequest(offset, limit, new Sort(Sort.Direction.DESC, SORT_FIELD));
+            return invoiceRepository.findByOptionalSearchParams(invoiceNumber, purchaseOrderNumber,
+                    dueDateStart != null ? LocalDate.parse(dueDateStart) : null,
+                    dueDateEnd != null ? LocalDate.parse(dueDateEnd) : null,
+                    offsetLimitRequest).getContent();
+        }
+        catch(Exception e) {
+            throw new BadRequestException(e);
+        }
     }
 
     @Override
