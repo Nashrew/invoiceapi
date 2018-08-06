@@ -1,5 +1,10 @@
 Instuctions to build, run, and use
 
+Requirements
+
+    - Java 8
+    - Maven (3.5.2 used in development)
+
 Command line:
 
     Primary:
