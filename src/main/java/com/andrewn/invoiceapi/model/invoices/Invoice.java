@@ -30,6 +30,7 @@ public class Invoice {
     private String purchaseOrderNumber;
 
     @Column(name="due_date")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private LocalDate dueDate;
 
     @NotNull

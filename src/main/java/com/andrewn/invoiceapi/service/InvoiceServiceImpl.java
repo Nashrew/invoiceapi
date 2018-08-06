@@ -54,7 +54,7 @@ public class InvoiceServiceImpl implements InvoiceService {
     @Override
     public Invoice replaceInvoice(Integer id, Invoice invoice) {
         Invoice existingInvoice = lookupInvoice(id);
-        BeanUtils.copyProperties(invoice, existingInvoice, "id");
+        BeanUtils.copyProperties(invoice, existingInvoice, "id", "createdAt");
         return saveInvoice(existingInvoice);
     }
 

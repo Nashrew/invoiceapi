@@ -96,7 +96,6 @@ public class InvoiceServiceTest {
         assertThat(savedInvoice.getPurchaseOrderNumber()).isEqualTo("def");
         assertThat(savedInvoice.getDueDate()).isNull();
         assertThat(savedInvoice.getAmountCents()).isEqualTo(2000L);
-
     }
 
     @Test
