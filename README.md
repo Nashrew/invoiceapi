@@ -26,3 +26,6 @@ Eclipse / IntelliJ:
 Usage:
 
     API documentation can be found when the app is running at /swagger-ui.html 
+    H2 Database console can be accessed at /h2 - you can log in as sa with no password
+        - In a real production environment this would be a terrible thing, but for testing purposes
+            easy DB access is allowed by default.
