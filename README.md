@@ -10,7 +10,7 @@ Command line:
     Primary:
         - The easiest way to run the app is to run 'mvn spring-boot:run' from the invoiceapi directory.
 
-    Alrenative:
+    Alternative:
         Build:
          - Navigate to the invoiceapi directory, run 'mvn package' to create a jar in the /target/ directory
 
@@ -27,5 +27,3 @@ Usage:
 
     API documentation can be found when the app is running at /swagger-ui.html 
     H2 Database console can be accessed at /h2 - you can log in as sa with no password
-        - In a real production environment this would be a terrible thing, but for testing purposes
-            easy DB access is allowed by default.
